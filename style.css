@@ -261,16 +261,48 @@ header .container {
 
 /* Контакты */
 .contacts {
-  background-color: #f0f0f0;
-  padding: 20px;
+  padding-bottom: 97px;
+}
+
+.contacts .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 170px;
+}
+
+.contacts iframe {
+  height: 336px;
+  width: 498px;
+}
+
+.gray-section {
+  background: #d9d9d9;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.gray-section h2 {
+  font-size: 40px;
+  color: #143471;
 }
 
 .contact-details {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.map img {
-  width: 100%;
+.contact-sec {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  color: #515f7d;
+}
+
+.contact-sec img {
+  width: 36px;
   height: auto;
 }
 
