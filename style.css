@@ -1,16 +1,23 @@
-/* Шрифты */
 @font-face {
-  font-family: 'Nuosu SIL';
-  src: url('./fonts/NuosuSIL/NuosuSIL-Regular.woff2') format('woff2'),
-    url('./fonts/NuosuSIL/NuosuSIL-Regular.woff') format('woff');
+  font-family: 'PaytoneOne';
+  src: url('./fonts/PaytoneOne/PaytoneOne-Regular.woff2') format('woff2'),
+    url('./fonts/PaytoneOne/PaytoneOne-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PaytoneOne';
-  src: url('./fonts/PaytoneOne/PaytoneOne-Regular.woff2') format('woff2'),
-    url('./fonts/PaytoneOne/PaytoneOne-Regular.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+    url('./fonts/Roboto/Roboto-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts/Roboto/Roboto-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -22,9 +29,21 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 24px;
+}
+
 body {
-  font-family: 'Nuosu SIL', sans-serif;
-  font-size: 32px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.container {
+  width: 94.4%;
+  max-width: 1344px;
+  margin: 0 auto;
 }
 
 a {
@@ -34,11 +53,14 @@ a {
 
 /* Шапка */
 header {
+  background: linear-gradient(90deg, #f2f5fb, #c7d6f2);
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
-  background-color: #f0f4f8;
   padding: 0px 0px 6px 42px;
-  background: linear-gradient(90deg, #f2f5fb, #c7d6f2);
+  position: relative;
 }
 
 .left-section {
@@ -73,8 +95,8 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 4px;
-  top: -10px;
+  right: 0px;
+  top: 0px;
 }
 
 .inside-semicircle {
@@ -83,7 +105,7 @@ header {
   right: 112px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 16px;
 }
 
 .phone-container {
@@ -100,7 +122,7 @@ header {
 .svg-text {
   font-family: PaytoneOne, sans-serif;
   color: #1d2c57;
-  font-size: 48px;
+  font-size: 2rem;
 }
 
 .svg-info {
@@ -109,7 +131,6 @@ header {
 }
 
 /* Раздел поиска */
-
 .search-bar,
 .catalog {
   display: flex;
@@ -127,13 +148,17 @@ header {
 }
 
 .search input {
-  padding: 20px 40px;
+  padding: 10px 45px 10px 20px; /* Увеличим правый отступ для иконки */
   border: 1px solid #000;
   background-color: #e0e7f4;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
     0px 1px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
+  border-radius: 45px;
   width: 720px;
+  font-size: 1rem;
+  background-image: url('./images/search-icon.svg');
+  background-position: right 20px center; /* Позиция иконки справа внутри поля */
+  background-repeat: no-repeat; /* Иконка не повторяется */
 }
 
 .user-actions {
@@ -151,27 +176,33 @@ header {
 }
 
 /* Основной баннер */
-.main-banner {
+.main-banner .container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 100px 0;
+  position: relative;
+  right: 40px;
 }
 
 .main-banner img {
-  max-width: 100%;
-  height: auto;
+  width: 666px;
 }
 
 .banner-text {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 84px;
+  text-align: center;
+  color: #0d3d95;
+  text-shadow: 2px 2px 4px rgba(101, 101, 101, 0.715);
 }
 
 /* Категории товаров */
 .categories {
-  background-color: #f0f4f8;
+  background-color: #e0e7f4;
   text-align: center;
   padding: 20px;
 }
@@ -191,6 +222,13 @@ header {
 .sales {
   text-align: center;
   padding: 20px;
+}
+
+.sales-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Контакты */
