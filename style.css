@@ -87,6 +87,11 @@ header .container {
 
 .menu li a {
   color: #2b3c5bc7;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #042766;
 }
 
 /* Стили для полукруга */
@@ -168,6 +173,19 @@ header .container {
 }
 
 .login,
+.shopping-cart,
+.catalog {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.login:hover,
+.shopping-cart:hover,
+.catalog:hover {
+  transform: scale(1.03);
+}
+
+.login,
 .shopping-cart {
   display: flex;
   align-items: center;
@@ -218,6 +236,14 @@ header .container {
   display: flex;
   justify-content: center;
   gap: 217px;
+}
+
+.category {
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.02);
 }
 
 .category img {
@@ -327,4 +353,9 @@ footer ul li a {
   color: #000;
   font-size: 1rem;
   color: rgba(43, 60, 91, 0.78);
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #04245f;
 }
